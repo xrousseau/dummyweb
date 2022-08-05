@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var os = require("os");
+var ip = require('ip');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: os.hostname() });
+  res.render('index', { title: ip.address() });
 });
 
 module.exports = router;
